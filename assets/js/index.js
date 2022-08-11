@@ -40,10 +40,12 @@ function renderAvatar(user) {
         //渲染头像图片
         $('.layui-nav-img').attr('src', user.user_pic).show()
         $('.text-avater').hide()
+    } else {
+        //渲染字母头像
+        $('.layui-nav-img').hide()
+            //首字母大写
+        var first = name[0].toUpperCase()
+        $('.text-avater').html(first).show()
     }
-    //渲染字母头像
-    $('.layui-nav-img').hide()
-        //首字母大写
-    var first = name[0].toUpperCase()
-    $('.text-avater').html(first).show()
+
 }
